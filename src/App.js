@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import Post from './features/posts/posts';
 import { Counter } from './features/counter/Counter';
 import './App.css';
 
@@ -9,6 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
+            <Post/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
