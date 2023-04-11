@@ -1,6 +1,6 @@
 import React from "react";
 import Posts from "./features/posts/posts";
-
+import './App.css';
 
 function App() {
   return (
