@@ -1,0 +1,25 @@
+.NavBar {
+    /* Position of the bar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Sizing */
+    height: 4rem;
+    width: 100vw;
+    background-color: green;
+    /* Children position */
+    display: flex;
+    align-items: center;
+    
+   
+}
+
+.NavBar img {
+    height: 3rem;
+    margin: 0 3rem;;
+}
+
+.NavBar div {
+    background-color: pink;
+    flex-grow: 1;
+}
