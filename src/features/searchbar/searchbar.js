@@ -16,7 +16,7 @@ export const SearchBar = () => {
   return (
     <>
       <input id="searchBar" value={searchTerm} onChange= {handleChange} placeholder="Search posts" />
-      <button>Clear</button>
+      <button onClick={()=>{dispatch(setSearchTerm(''))}}>Clear</button>
     </>
   );
 };

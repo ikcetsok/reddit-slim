@@ -21,7 +21,6 @@
 .SearchBar {
     display: flex;
     justify-content: space-between;
-    background-color: pink;
     flex-grow: 1;
     max-width: 350px;
 }
