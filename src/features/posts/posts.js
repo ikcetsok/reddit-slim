@@ -23,7 +23,7 @@ export default function Posts() {
         })
       )}
 
-      <button onClick={turn}>Load</button>
+
     </section>
   );
 }

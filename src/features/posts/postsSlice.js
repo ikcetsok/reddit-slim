@@ -4,7 +4,7 @@ export const loadPosts = createAsyncThunk(
   "posts/loadPosts",
   async (subreddit) => {
     try {
-      const posts = await fetch("https://www.reddit.com/r/kindafunny/.json");
+      const posts = await fetch(`https://www.reddit.com/r/${subreddit}/.json`);
       const response = await posts.json();
       console.log(response.data.children);
       return response.data.children;

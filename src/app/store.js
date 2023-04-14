@@ -6,6 +6,7 @@ import feedsReducer from "../features/feeds/feedsSlice"
 export const store = configureStore({
   reducer: {
     posts: postsReducer,
-    searchTerm: searchTermReducer
+    searchTerm: searchTermReducer,
+    feeds: feedsReducer
   },
 });
