@@ -9,6 +9,8 @@
     /* Children position */
     display: flex;
     align-items: center;
+    z-index: 10;
+    background-color: white;
     
    
 }

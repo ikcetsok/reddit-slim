@@ -1,0 +1,27 @@
+.post {
+    display: flex;
+    background-color: rgb(212, 236, 248);
+    margin: 1rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid black;
+    box-shadow: 5px 5px rgb(168, 203, 221);
+}
+
+.post .author {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.post .title {
+    background-color: rgb(188, 192, 219);
+    font-size: 2rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+}
+
+.post .content {
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
