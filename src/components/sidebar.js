@@ -13,7 +13,7 @@ export const SideBar = () => {
         <>
         {feeds.map((feed, index)=>{
             return <button className="subreddit" key={index} onClick={()=>{dispatch(loadPosts(feed))}}>
-            <h2>{feed}</h2>
+            {feed}
             </button>
         })}
         </>

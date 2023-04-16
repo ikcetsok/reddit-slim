@@ -7,10 +7,15 @@ export function Post({ post }) {
   const title = data.title;
   const content = data.selftext_html;
   const author = data.author;
+  const score = data.score;
 
   return (
     <div className="post">
-        <div></div>
+      <div className="info">
+        <i class="fas fa-arrow-up"></i>
+        <p>{score}</p>
+        <i class="fas fa-arrow-down"></i>
+      </div>
       <div>
         <p className="author">Posted by {author}</p>
         <h1 className="title">{title}</h1>

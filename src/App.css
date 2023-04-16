@@ -3,6 +3,11 @@ html {
   font-size: 16px;
   box-sizing: border-box;
   font-family:Arial, Helvetica, sans-serif !important;
+  
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 .App {
@@ -39,8 +44,20 @@ html {
   width: auto;
   margin-top: 1rem;
   margin-right: 1.5rem;
-  margin-left: 0.8rem;
+  margin-left: 1rem;
   border: none;
   cursor:pointer;
-  box-shadow: 5px 5px rgb(76, 105, 125);
+  box-shadow: 0 5px rgb(76, 105, 125);
+}
+
+.subreddit:hover {
+  background-color: rgb(183, 219, 221);
+}
+
+.subreddit:active {
+  background-color: rgb(154, 241, 166);
+  position: relative;
+  top:5px;
+  /* left: 5px; */
+  box-shadow: 0 0;
 }
