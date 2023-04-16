@@ -24,6 +24,7 @@ export function Post({ post }) {
           dangerouslySetInnerHTML={{ __html: ReactHtmlParser(content) }}
         />
       </div>
+      
     </div>
   );
 }
