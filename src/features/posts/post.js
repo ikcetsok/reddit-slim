@@ -23,7 +23,7 @@ export function Post({ post }) {
           className="content"
           dangerouslySetInnerHTML={{ __html: ReactHtmlParser(content) }}
         />
-        <div className="Comments">Comments</div>
+        <div className="Comments">Comments {data.num_comments}</div>
       </div>
     </div>
   );
