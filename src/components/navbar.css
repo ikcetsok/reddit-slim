@@ -11,7 +11,7 @@
     align-items: center;
     z-index: 10;
     background-color: white;
-    
+    box-shadow: 0 5px 8px rgb(232, 232, 232);
    
 }
 
@@ -32,4 +32,15 @@
     height: 2rem;
     border-radius: 0.3rem;
     display: inline-block;
+}
+
+.SearchBar button {
+    border-radius: 3px;
+    border: none;
+    width: 3.5rem;
+    background-color: rgb(192, 231, 233);
+}
+
+.SearchBar button:hover {
+    background-color: rgb(183, 219, 221);
 }

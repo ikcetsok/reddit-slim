@@ -16,15 +16,15 @@ export function Post({ post }) {
         <p>{score}</p>
         <i class="fas fa-arrow-down"></i>
       </div>
-      <div>
-        <p className="author">Posted by {author}</p>
+      <div className="mainPart">
+        {author ? <p className="author">Posted by {author}</p> : <></>}
         <h1 className="title">{title}</h1>
         <div
           className="content"
           dangerouslySetInnerHTML={{ __html: ReactHtmlParser(content) }}
         />
+        <div className="Comments">Comments</div>
       </div>
-      
     </div>
   );
 }
