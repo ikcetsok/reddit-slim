@@ -1,6 +1,7 @@
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
 import "./post.css";
+import { Comments } from "../comments/comments";
 
 export function Post({ post }) {
   const data = post.data;
@@ -9,7 +10,7 @@ export function Post({ post }) {
   const author = data.author;
   const score = data.score;
 
-  console.log('data', data);
+  console.log("data", data);
 
   return (
     <div className="post">
@@ -25,7 +26,7 @@ export function Post({ post }) {
           className="content"
           dangerouslySetInnerHTML={{ __html: ReactHtmlParser(content) }}
         />
-        <div className="Comments">Comments {data.num_comments}</div>
+        <Comments permalink={data.permalink} num_comments={data.num_comments} />
       </div>
     </div>
   );

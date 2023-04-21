@@ -11,7 +11,7 @@ export const loadComments = createAsyncThunk(
   "comments/loadComments",
   async (permalink) => {
     try {
-      const comments = await fetch(`https://www.reddit.com${permalink}`);
+      const comments = await fetch(`https://www.reddit.com${permalink}.json`);
       const response = await comments.json();
       console.log("komentarze", response[1].data.children);
       return response[1].data.children;
@@ -24,7 +24,11 @@ export const loadComments = createAsyncThunk(
 export const commentsSlice = createSlice({
   name: "comments",
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    resetComments: (state) => {
+      state.comments = [];
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(loadComments.pending, (state) => {
       state.isLoading = true;
@@ -43,5 +47,7 @@ export const commentsSlice = createSlice({
 });
 
 export const selectComments = (state) => state.comments;
+
+export const { resetComments } = commentsSlice.actions;
 
 export default commentsSlice.reducer;
