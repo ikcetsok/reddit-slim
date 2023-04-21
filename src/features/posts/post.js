@@ -9,6 +9,8 @@ export function Post({ post }) {
   const author = data.author;
   const score = data.score;
 
+  console.log('data', data);
+
   return (
     <div className="post">
       <div className="info">

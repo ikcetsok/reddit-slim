@@ -41,27 +41,6 @@ export const postSlice = createSlice({
   },
 });
 
-// export const postSlice = createSlice({
-//   name: "posts",
-//   initialState,
-//   reducers: {},
-//   extraReducers: (builder) => {
-//     builder.addCase(loadPosts.pending, (state, action) => {
-//       state.isLoading = true;
-//       state.hasError = false;
-//     });
-//     builder.addCase(loadPosts.hasError, (state, action) => {
-//       state.isLoading = false;
-//       state.hasError = true;
-//     });
-//     builder.addCase(loadPosts.fulfilled, (state, action) => {
-//       state.isLoading = false;
-//       state.hasError = false;
-//       state.posts = action.payload;
-//     });
-//   },
-// });
-
 export const selectPosts = (state) => state.posts;
 
 
