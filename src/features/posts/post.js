@@ -11,24 +11,31 @@ export function Post({ post }) {
   const score = data.score;
   const name = data.name;
 
-  console.log("data", data);
+  // console.log("data", data);
 
   return (
     <div className="post">
-      <div className="info">
-        <i class="fas fa-arrow-up"></i>
-        <p>{score}</p>
-        <i class="fas fa-arrow-down"></i>
+      <div className="innerPost">
+        <div className="info">
+          <i class="fas fa-arrow-up"></i>
+          <p>{score}</p>
+          <i class="fas fa-arrow-down"></i>
+        </div>
+
+        <div className="mainPart">
+          {author ? <p className="author">Posted by {author}</p> : <></>}
+          <h1 className="title">{title}</h1>
+          <div
+            className="content"
+            dangerouslySetInnerHTML={{ __html: ReactHtmlParser(content) }}
+          />
+        </div>
       </div>
-      <div className="mainPart">
-        {author ? <p className="author">Posted by {author}</p> : <></>}
-        <h1 className="title">{title}</h1>
-        <div
-          className="content"
-          dangerouslySetInnerHTML={{ __html: ReactHtmlParser(content) }}
-        />
-        <Comments permalink={data.permalink} num_comments={data.num_comments} name={name}/>
-      </div>
+      <Comments
+        permalink={data.permalink}
+        num_comments={data.num_comments}
+        name={name}
+      />
     </div>
   );
 }

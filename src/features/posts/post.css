@@ -1,5 +1,6 @@
 .post {
   display: flex;
+  flex-direction: column;
   background-color: rgb(232, 242, 247);
   margin: 1rem 1rem;
   padding: 0.5rem 0.5rem;
@@ -48,12 +49,18 @@
   font-weight: 700;
 }
 
+.post .mainPart {
+  width: 100%;
+}
+
+.post .innerPost {
+  display: flex;
+}
+
+/* Comments */
+
 .post .Comments {
   float: right;
   padding: 1rem 0;
   margin-right: 2rem;
-}
-
-.post .mainPart {
-  width: 100%;
 }
