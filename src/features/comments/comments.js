@@ -25,15 +25,26 @@ export const Comments = ({ permalink, num_comments, name }) => {
           Comments {num_comments}
         </button>
       </div>
-      {comments.isLoading && <>
+      {comments.isLoading && show && (
+        <>
           <h1 className="LoadingComment">
             <i class="fas fa-spinner fa-spin"></i> Loading...
           </h1>
-        </> }
+        </>
+      )}
       {show &&
         comments.comments.map((comment) => {
           return <Comment comment={comment} />;
         })}
+      {show && (
+        <button className="closeComments"
+          onClick={() => {
+            dispatch(resetComments());
+          }}
+        >
+          Close Comments
+        </button>
+      )}
     </div>
   );
 };

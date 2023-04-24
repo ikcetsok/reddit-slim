@@ -10,7 +10,7 @@ export const Comment = ({comment}) => {
 
 return (
     <div className="comment">
-        <p>Posted by {author} with Score: <strong>{score}</strong></p>
+        <p className="commentAuthor">Posted by {author} with Score: <strong>{score}</strong></p>
         <div
           className="content"
           dangerouslySetInnerHTML={{ __html: ReactHtmlParser(content) }}
