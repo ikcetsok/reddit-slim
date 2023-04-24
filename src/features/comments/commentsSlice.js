@@ -13,7 +13,6 @@ export const loadComments = createAsyncThunk(
     try {
       const comments = await fetch(`https://www.reddit.com${permalink}.json`);
       const response = await comments.json();
-      console.log("komentarze", response[1].data.children);
       return response[1].data.children;
     } catch (error) {
       console.log("loadComments error", error);
