@@ -9,6 +9,7 @@ export function Post({ post }) {
   const content = data.selftext_html;
   const author = data.author;
   const score = data.score;
+  const name = data.name;
 
   console.log("data", data);
 
@@ -26,7 +27,7 @@ export function Post({ post }) {
           className="content"
           dangerouslySetInnerHTML={{ __html: ReactHtmlParser(content) }}
         />
-        <Comments permalink={data.permalink} num_comments={data.num_comments} />
+        <Comments permalink={data.permalink} num_comments={data.num_comments} name={name}/>
       </div>
     </div>
   );

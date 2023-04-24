@@ -4,10 +4,11 @@ import { loadComments } from "./commentsSlice";
 import { resetComments } from "./commentsSlice";
 import { useSelector, useDispatch } from "react-redux";
 
-export const Comments = ({permalink, num_comments}) => {
+export const Comments = ({permalink, num_comments, name}) => {
   const comments = useSelector(selectComments);
   const dispatch = useDispatch();
-    console.log('num_comment', num_comments);
+  let show =  false;
+  if (comments.comments?.[0]?.data?.parent_id == name) show=true;
   return (
     <div className="Comments">
       <div className="loadCommentsButton">
@@ -19,8 +20,7 @@ export const Comments = ({permalink, num_comments}) => {
           Comments {num_comments}
         </button>
       </div>
-
-      {/* Tutaj musisz dodac najpier warunek zeby pokazywal loading i pokazywal tylko jak length jest > 0. Wtedy nowy komponent Comment */}
-    </div>
+      {show && <div>sukcessss</div>}
+       </div>
   );
 };
