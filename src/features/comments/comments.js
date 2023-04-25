@@ -4,6 +4,7 @@ import { loadComments } from "./commentsSlice";
 import { resetComments } from "./commentsSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { Comment } from "./comment";
+import './comments.css'
 
 export const Comments = ({ permalink, num_comments, name }) => {
   const comments = useSelector(selectComments);
