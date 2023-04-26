@@ -2,18 +2,21 @@
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
-
   margin-left: 4rem;
   margin-right: 2rem;
 }
 
 .post .Comments .loadCommentsButton {
-  align-self: flex-end;
+  /* align-self: flex-end;
+  display: block;
+  width: 100%;
+  flex-grow: 1; */
 }
 
 .post .Comments .closeComments {
   max-width: 10rem;
   align-self: center;
+  background-color: rgb(253, 246, 220);
 }
 
 .post button {
@@ -42,4 +45,14 @@
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   border-bottom-left-radius: 0.5rem;
+}
+
+.commentButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(253, 246, 220);
+  height: 1.5rem;
+  font-size: ;
 }
