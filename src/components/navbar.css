@@ -1,46 +1,62 @@
 .NavBar {
-    /* Position of the bar */
-    position: fixed;
-    top: 0;
-    left: 0;
-    /* Sizing */
-    height: 5rem;
-    width: 100vw;
-    /* Children position */
-    display: flex;
-    align-items: center;
-    z-index: 10;
-    background-color: rgb(255,250,248);
-    box-shadow: 0 5px 8px rgb(232, 232, 232);
-   
+  /* Position of the bar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Sizing */
+  height: 5rem;
+  width: 100vw;
+  /* Children position */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  background-color: rgb(255, 250, 248);
+  box-shadow: 0 5px 8px rgb(232, 232, 232);
 }
 
 .NavBar img {
-    height: 3rem;
-    margin: 0 3rem;;
+  height: 3rem;
+  margin: 0 3rem;
 }
 
 .SearchBar {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-    max-width: 350px;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  max-width: 350px;
 }
 
 .SearchBar input {
-    width: 80%;
-    height: 2rem;
-    border-radius: 0.3rem;
-    display: inline-block;
+  width: 80%;
+  height: 2rem;
+  border-radius: 0.3rem;
+  display: inline-block;
 }
 
 .SearchBar button {
-    border-radius: 3px;
-    border: none;
-    width: 3.5rem;
-    background-color: rgb(192, 231, 233);
+  margin: 0 0.5rem;
+  border-radius: 3px;
+  border: none;
+  width: 3.5rem;
+  background-color: rgb(192, 231, 233);
 }
 
 .SearchBar button:hover {
-    background-color: rgb(183, 219, 221);
+  background-color: rgb(183, 219, 221);
+}
+
+.wideNav {
+  display: flex;
+  align-items: center;
+  min-width: 600px;
+}
+
+.dropdownList {
+  width: 90%;
+}
+
+.dropdownList select {
+  width: 100%;
+  font-size: 2rem;
 }
