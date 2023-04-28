@@ -2,8 +2,7 @@ html {
   height: 100vh;
   font-size: 16px;
   box-sizing: border-box;
-  font-family:Arial, Helvetica, sans-serif !important;
-  
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
 html::-webkit-scrollbar {
@@ -11,14 +10,13 @@ html::-webkit-scrollbar {
 }
 
 .App {
-  
-  position:relative;
+  position: relative;
   top: 2rem;
 }
 
 .App main {
   position: relative;
-  top:4rem;
+  top: 4rem;
   display: flex;
   justify-content: space-between;
 }
@@ -32,9 +30,7 @@ html::-webkit-scrollbar {
 }
 
 .App main .posts {
- 
-  width:80%;
-
+  width: 80%;
 }
 
 .subreddit {
@@ -47,7 +43,7 @@ html::-webkit-scrollbar {
   margin-right: 1.5rem;
   margin-left: 1rem;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
   box-shadow: 0 5px 5px rgb(178, 199, 214);
 }
 
@@ -58,7 +54,7 @@ html::-webkit-scrollbar {
 .subreddit:active {
   background-color: rgb(194, 239, 200);
   position: relative;
-  top:5px;
+  top: 5px;
   /* left: 5px; */
   box-shadow: 0 0;
 }
@@ -71,4 +67,13 @@ html::-webkit-scrollbar {
 
 .LoadingPost {
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .App main .sideBar {
+    display: none;
+  }
+  .App main .posts {
+    width: 100%;
+  }
 }

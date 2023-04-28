@@ -8,8 +8,8 @@ export const Reply = ({ reply }) => {
   const content = data.body_html;
   const score = data.score;
 
-  return (
-    <div className="reply">
+  return (<>
+   {content && <div className="reply">
       <p className="commentAuthor">
         Posted by {author} with Score: <strong>{score}</strong>
       </p>
@@ -18,6 +18,7 @@ export const Reply = ({ reply }) => {
         dangerouslySetInnerHTML={{ __html: ReactHtmlParser(content) }}
       />
       {replies && replies.data.children.map((reply) => <Reply reply={reply} />)}
-    </div>
+    </div>}
+    </>
   );
 };

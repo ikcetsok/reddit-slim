@@ -31,10 +31,11 @@
 
 .post .title {
   background-color: rgb(188, 192, 219);
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   padding: 0.2rem 0.3rem;
   border-radius: 0.3rem;
-  display: block;
+  display:flex;
+  align-items: center;
   min-height: 2rem;
   min-width: 200px;
 }
@@ -56,4 +57,5 @@
 .post .innerPost {
   display: flex;
 }
+
 
